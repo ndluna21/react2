@@ -1,20 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 
-
-
-function WindowSize() {
-    const [width, setWidth] = useState(window.innerWidth)
-    useEffect(() => {
-        const evResize = () => setWidth(window.innerWidth)
-        window.addEventListener("resize", evResize)
-        return () => {
-            window.removeEventListener("resize", evResize)
-            console.log("Cleanup");
-        }
-    }, [])
-    return <p>Width: {width}</p>
-}
+// useEffect xử lí side effect (tác vụ phụ)
 
 type Post = {
     userId: number,
@@ -87,4 +74,17 @@ export default function Effect() {
             </ul>
         </div>
     )
+}
+
+function WindowSize() {
+    const [width, setWidth] = useState(window.innerWidth)
+    useEffect(() => {
+        const evResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", evResize)
+        return () => {
+            window.removeEventListener("resize", evResize)
+            console.log("Cleanup");
+        }
+    }, [])
+    return <p>Width: {width}</p>
 }

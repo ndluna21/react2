@@ -3,6 +3,8 @@ import { useActionState } from "react"
 // Dùng để gọi 1 server action, quản lý state kết quả trả về từ action đó
 // Thay thế cho useState + useEffect + try/catch
 
+// Dùng useActionState khi muốn gửi form; nhận phản hồi từ server; hiển thị thông báo, dữ liệu, chuyển hướng dựa trên kq
+
 async function login(prev, formData) {
     const email = formData.get('email')
     return {success: true, email}

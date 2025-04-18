@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useMemo, useState } from "react";
 
 // useMemo giúp ghi nhớ giá trị được tính toán, chỉ tính lại khi dep thay đổi
@@ -17,6 +16,8 @@ export default function Memo() {
         }
         return total + count
     }, [count])
+
+
 
     return(
         <div>

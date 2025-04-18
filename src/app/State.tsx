@@ -1,9 +1,12 @@
 import { useState } from "react"
 
 // Bộ nhớ tạm trong component
+const x = 0;
+console.log(x);
 
 export default function State(){
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(x)
+    
     console.log("Renders");
     return (
         <div>
@@ -12,7 +15,9 @@ export default function State(){
             <button 
                 type="button" 
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2" 
-                onClick={() => setCount(count + 1)}>Click</button>
+                onClick={() => setCount(count + 1)}>
+                    Click
+            </button>
         </div>
     )
 }

@@ -2,6 +2,11 @@ import { useFormStatus } from "react-dom"
 
 // useFormStatus được dùng bên trong form để lấy trạng thái hiện tại của form submission
 
+// const { pending, data, action } = useFormStatus();
+// pending: true nếu form đang dc submit, data: FormData vừa được gửi, action: Hàm formAction đang được gọi
+
+// Sử dụng để hiển thị trạng thái loading khi gửi submit form, disable nút submit khi đang gửi
+
 function SubmitBtn() {
     const {pending} = useFormStatus();
 
